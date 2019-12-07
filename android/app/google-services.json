@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "226403224527",
+    "firebase_url": "https://bptracker-app.firebaseio.com",
+    "project_id": "bptracker-app",
+    "storage_bucket": "bptracker-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:226403224527:android:67f4a649f2f20f97b1a0ba",
+        "android_client_info": {
+          "package_name": "com.example.zerok_health"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "226403224527-2a1lgmdisjbsa34bm16ebgjden82lrg0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBx7IkVf2lB4CBDI4XXiy0a70zIHPD7MDg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "226403224527-2a1lgmdisjbsa34bm16ebgjden82lrg0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

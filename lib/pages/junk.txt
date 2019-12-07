@@ -1,0 +1,111 @@
+class StatsPage extends StatelessWidget {
+
+  @override
+  Widget build(BuildContext context) {
+    Color color = Theme.of(context).primaryColor;
+
+    Widget buttonSection = Container(
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: [
+          _buildButtonColumn(color, 'Systolic BP', '124'),
+          _buildButtonColumn(color, 'Diastolic BP', '83'),
+          _buildButtonColumn(color, 'Pulse rate', '89'),
+        ],
+      ),
+    );
+
+    return ListView(
+      children: <Widget>[
+        SizedBox(
+          child: Card(
+            child: Column(
+              children: [
+                ListTile(
+                  title: Text('Last uploaded results',
+                      style: TextStyle(fontWeight: FontWeight.w500),),
+                  subtitle: Text('12 OCTOBER 2019'),
+                ),
+                Divider(),
+                buttonSection,
+                HomePage(),
+                Divider(),
+                ListTile(
+                  title: Text('NORMAL',
+                  style: TextStyle(color: Colors.green[500])
+                  ),
+                  leading: Text('status'),
+                ),
+              ],
+            ),
+          ),
+        ),
+        SizedBox(
+          child: Card(
+            child: Column(
+              children: [
+                ListTile(
+                  title: Text('Heighest recorded results',
+                      style: TextStyle(fontWeight: FontWeight.w500),),
+                  subtitle: Text('04 MAY 2019'),
+                ),
+                Divider(),
+                buttonSection,
+                Divider(),
+                ListTile(
+                  title: Text('HIGH',
+                  style: TextStyle(color: Colors.red[500])
+                  ),
+                  leading: Text('status'),
+                ),
+              ],
+            ),
+          ),
+        ),
+        SizedBox(
+          child: Card(
+            child: Column(
+              children: [
+                ListTile(
+                  title: Text('This is where the graph will be',
+                      style: TextStyle(fontWeight: FontWeight.w500),),
+                  subtitle: Text('12 OCTOBER 2019'),
+                ),
+                Divider(),
+                buttonSection,
+                Divider(),
+                ListTile(
+                  title: Text('NORMAL',
+                  style: TextStyle(color: Colors.green[500])
+                  ),
+                  leading: Text('status'),
+                ),
+              ],
+            ),
+          ),
+        ),
+      ],
+    );
+  }
+
+  Column _buildButtonColumn(Color color, String title, String label) {
+    return Column(
+      mainAxisSize: MainAxisSize.min,
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Text(title, style: TextStyle(color: color),),
+        Container(
+          margin: const EdgeInsets.only(top: 8),
+          child: Text(
+            label,
+            style: TextStyle(
+              fontSize: 15,
+              fontWeight: FontWeight.w400,
+              color: color,
+            ),
+          ),
+        ),
+      ],
+    );
+  }
+}
